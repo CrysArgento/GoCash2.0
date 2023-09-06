@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Sitio de Chat</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.3.1/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.3.1/firebase-analytics.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+      
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+          apiKey: "AIzaSyB9jM7U0Bo20_99g65Zt6b2QJ83HvIzO_4",
+          authDomain: "gocash-2e170.firebaseapp.com",
+          projectId: "gocash-2e170",
+          storageBucket: "gocash-2e170.appspot.com",
+          messagingSenderId: "1036177032838",
+          appId: "1:1036177032838:web:bee2d1549c6049afd3b307",
+          measurementId: "G-NVW189XH5E"
+        };
+      
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+      </script>
+    <header>
+        <h1>Mi Sitio de Chat</h1>
+        <nav>
+            <ul>
+                <li><a href="#sala1">Sala 1</a></li>
+                <li><a href="#sala2">Sala 2</a></li>
+                <li><a href="#sala3">Sala 3</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="sala1">
+            <h2>Sala 1</h2>
+            <div class="chat" id="chat1"></div>
+            <input type="text" id="message1" placeholder="Escribe tu mensaje">
+            <button onclick="sendMessage(1)">Enviar</button>
+        </section>
+
+        <section id="sala2">
+            <h2>Sala 2</h2>
+            <div class="chat" id="chat2"></div>
+            <input type="text" id="message2" placeholder="Escribe tu mensaje">
+            <button onclick="sendMessage(2)">Enviar</button>
+        </section>
+
+        <section id="sala3">
+            <h2>Sala 3</h2>
+            <div class="chat" id="chat3"></div>
+            <input type="text" id="message3" placeholder="Escribe tu mensaje">
+            <button onclick="sendMessage(3)">Enviar</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>Pie de página de tu sitio</p>
+    </footer>
+
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
